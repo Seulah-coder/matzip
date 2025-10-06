@@ -31,5 +31,6 @@ target 'matzip' do
       :mac_catalyst_enabled => false,
       # :ccache_enabled => true
     )
+    pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
   end
 end

@@ -1,16 +1,14 @@
 import React from 'react';
 import {StyleSheet, Text, SafeAreaView} from 'react-native';
-import DrawerButton from '@/components/DrawerButton';
 
-function MapHomeScreen() {
+function FeedFavoriteScreen() {
   return (
     <SafeAreaView>
-      <Text>MapHomeScreen</Text>
-      <DrawerButton />
+      <Text>FeedFavoriteScreen</Text>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({});
 
-export default MapHomeScreen;
+export default FeedFavoriteScreen;
