@@ -3,7 +3,7 @@ import {
   DrawerContentScrollView,
   DrawerItemList,
 } from '@react-navigation/drawer';
-import React from 'react';
+import React, {use} from 'react';
 import {
   Image,
   Pressable,
@@ -13,8 +13,10 @@ import {
   View,
 } from 'react-native';
 import {colors} from '../constants/colors';
+import useAuth from '@/hooks/queries/useAuth';
 
 function CustomDrawerContent(props: DrawerContentComponentProps) {
+  const {auth} = useAuth();
   return (
     <SafeAreaView style={styles.container}>
       <DrawerContentScrollView
@@ -24,11 +26,11 @@ function CustomDrawerContent(props: DrawerContentComponentProps) {
         <Pressable style={styles.profileContainer}>
           <View style={styles.userImageContainer}>
             <Image
-              source={require('@/assets/default-user.png')}
+              source={require('@/assets/images/default-user.png')}
               style={styles.userImage}
             />
           </View>
-          <Text style={styles.nickname}>닉네임</Text>
+          <Text style={styles.nickname}>{auth.nickname}</Text>
         </Pressable>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>

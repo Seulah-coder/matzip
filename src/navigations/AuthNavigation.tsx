@@ -31,13 +31,14 @@ const AuthStack = createStackNavigator({
     Login: {
       screen: LoginScreen,
       options: {
-        headerShown: false,
+        headerShown: true,
         title: '로그인',
       },
     },
     Signup: {
       screen: SignupScreen,
       options: {
+        headerShown: true,
         title: '회원가입',
       },
     },
